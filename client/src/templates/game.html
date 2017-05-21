@@ -1,0 +1,18 @@
+<div id="game-container">
+	<div ng-switch="!gameIsActive">
+		<div ng-switch-when="true">
+			<div class="score">
+				<score></score>
+			</div>
+		</div>
+		<div ng-switch-when="false">
+			<div class="character-container" ng-repeat="character in runningCharacters" character-position
+				 char="character" lose-life="loseLife()" >
+				{{ character.value }}
+			</div>
+		</div>
+	</div>
+	<div class="game-score" ng-if="gameIsActive">
+		<span>Score: {{ player.score }}</span>●<span>Lives: {{ life }}</span>
+	</div>
+</div>

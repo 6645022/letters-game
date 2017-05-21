@@ -1,0 +1,42 @@
+body{
+    background: #2b2b2b !important;
+}
+body > div{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width:100%
+}
+#game-container{
+    position: absolute;
+    border: 1px solid #474747;
+    background: #000000;
+    width: 360px;
+    height: 600px;
+    box-shadow: 0 1px 20px #0c0c0c;
+    color:#ffffff;
+    top:10px;
+    margin: auto;
+    align-content: center;
+}
+#game-container h1{
+    color: #adadad;
+}
+#game-container > div > div > .score{
+    display:flex;
+    position: relative;
+}
+#game-container > div > div > .score > score{
+    margin: auto;
+    align-content: center;
+}
+#game-container > div > div > .score > score > div > .form{
+    margin-top: 50%;
+}
+.character-container{
+    position: absolute;
+}
+#game-container > .game-score{
+    position: absolute;
+    bottom: 0;
+}

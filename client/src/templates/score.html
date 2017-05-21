@@ -1,0 +1,30 @@
+<div ng-switch="!!highestScorePlayer">
+    <div ng-switch-when="true">
+        <h1>HIGH SCORE</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="player in highestScorePlayer">
+                <td>{{ player.name }}</td>
+                <td>{{ player.score }}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div>Press any key to restart</div>
+    </div>
+    <div class="form" ng-switch-default>
+        <h1>GAME OVER</h1>
+        <form class="form-horizontal" ng-submit="submitScore($event)">
+            <div class="form-group">
+                <input ng-model="player.name" required ng-required="true" type="text" class="form-control" placeholder="Name">
+                <input ng-model="player.score" type="hidden" value="{{ score }}" ng-init="player.score=player.score">
+            </div>
+            <button type="submit" class="btn btn-default btn-block">Save</button>
+        </form>
+    </div>
+</div>
