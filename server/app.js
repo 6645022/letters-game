@@ -1,5 +1,6 @@
 "use strict";
 const express = require('express'),
+      path = require('path'),
       logger = require('morgan'),
       bodyParser = require('body-parser'),
       app = express(),
@@ -10,6 +11,7 @@ import config  from './config/config';
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '../client')));
 app.use(bodyParser.urlencoded({extended: true}));
 
 // **** database ****
