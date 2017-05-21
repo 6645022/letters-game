@@ -2,7 +2,7 @@
   "name": "",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "client/index.html",
   "scripts": {
     "build": "webpack --progress --colors --watch",
     "start": "nodemon server/bin/www --exec babel-node --presets es2015,stage-2"
