@@ -9,7 +9,7 @@ import 'angular-route';
 
 angular.module('game', ['ngRoute'])
 .run(($rootScope) => {
-    $rootScope.api    = "http://54.76.108.48:80";
+    $rootScope.api    = "q:80";
 })
 .config(($routeProvider) => {
     $routeProvider
